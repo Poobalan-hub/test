@@ -1,7 +1,44 @@
 # 問診AI
 
-streamlitによる直感的なUI作成
-![](images/menu.png)
+このアプリケーションは、AIを使用して患者の症状を分析し、適切な診療科を提案する問診システムです。
+
+## 必要なパッケージのインストール
+
+以下のコマンドを実行して、必要なパッケージをインストールしてください：
+
+```bash
+pip install streamlit
+pip install openai==0.28
+pip install numpy
+pip install pandas
+pip install requests
+```
+
+または、requirements.txtを使用して一括インストールすることもできます：
+
+```bash
+pip install -r requirements.txt
+```
+
+## 使用方法
+
+1. アプリケーションを起動するには、以下のコマンドを実行します：
+
+```bash
+streamlit run app.py
+```
+
+2. ブラウザで自動的に開かれるStreamlitアプリケーションで、以下の手順で操作してください：
+   - サイドバーからAIモデルを選択（GPT-4またはDeepSeek）
+   - 選択したモデルに対応するAPIキーを入力
+   - 「設定を保存して開始」ボタンをクリック
+   - 症状を入力して問診を開始
+
+## 注意事項
+
+- APIキーは必ずご自身のものを使用してください
+- このアプリケーションは医療診断の代わりにはなりません
+- 緊急時は必ず救急車を呼んでください
 
 ## 概要
 
@@ -16,31 +53,6 @@ streamlitによる直感的なUI作成
 
 ### 2. Webインターフェース (`app.py`)
 - Streamlitベースの使いやすいUI
-
-
-### 1. 必要なパッケージのインストール
-```bash
-pip install -r requirements.txt
-pip install google-generativeai
-```
-
-## 使用方法
-
-### A. Webインターフェースでの実行（推奨）
-
-1. Streamlitアプリケーションを起動：
-```bash
-streamlit run app.py
-```
-
-2. ブラウザで以下のURLにアクセス：
-```
-http://localhost:8501
-```
-
-3. Webインターフェースの使用手順：
-
-### B. コマンドライン実行
 
 ## データ形式
 
